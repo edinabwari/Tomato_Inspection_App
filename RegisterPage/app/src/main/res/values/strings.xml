@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Register Page</string>
+    <string name="login">LogIn</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click To LogIn</string>
+    <string name="click_to_register">Click to register</string>
+    <string name="log_out">Log Out</string>
+    <string name="background_image_desc" />
+    <string name="tomato_inspection_application">Tomato Inspection Application</string>
+    <string name="tomato_test">Tomato Test</string>
+    <string name="scan_tomato">Scan Tomato</string>
+    <string name="home">Home</string>
+</resources>

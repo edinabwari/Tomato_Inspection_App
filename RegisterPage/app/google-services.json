@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "366586467886",
+    "project_id": "registerloginpage-372c0",
+    "storage_bucket": "registerloginpage-372c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366586467886:android:0395d7bc5db556670e31bf",
+        "android_client_info": {
+          "package_name": "com.example.registerpage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPh9gKIe8-qYNUApzoC3sD5j6H7TQyHXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
