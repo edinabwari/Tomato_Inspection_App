@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView textView;
     FirebaseUser user;
-
+    CardView logoutCard;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,28 +28,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         auth = FirebaseAuth.getInstance();
-        button = findViewById(R.id.logout);
+        button = findViewById(R.id.logout_button);
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
-        if (user == null){
+        logoutCard = findViewById(R.id.logout_card);
+
+        if (user == null) {
             Intent intent = new Intent(getApplicationContext(), LogIn.class);
             startActivity(intent);
             finish();
-        }
-        else {
+        } else {
             textView.setText(user.getEmail());
         }
 
+        button.setOnClickListener(view -> {
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(getApplicationContext(), LogIn.class);
+            startActivity(intent);
+            finish();
+        });
 
-//        button.setOnClickListener(new View.OnClickListener() {
- //       @Override
-   //         public void onClick(View view) {
-     //           FirebaseAuth.getInstance().signOut();
-       ////         Intent intent = new Intent(getApplicationContext(), LogIn.class);
-           //     startActivity(intent);
-             //   finish();
-     //       }
-       // });
-
+        logoutCard.setOnClickListener(view -> {
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(getApplicationContext(), LogIn.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }
