@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomato Inspection Application"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"/>
+
+        <!-- Brief Statement -->
+        <TextView
+            android:id="@+id/brief_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This app helps you detect the plant health of your tomato by simply taking a photo or uploading images from your phone and viewing the results."
+            android:textSize="16sp"
+            android:paddingBottom="16dp"/>
+
+        <!-- Diseases that can be analyzed Title -->
+        <TextView
+            android:id="@+id/title_diseases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diseases that can be analyzed:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- Bullet List of Diseases -->
+        <TextView
+            android:id="@+id/disease_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Tomato Early Blight\n• Tomato Late Blight\n• Tomato Septoria Leaf Spot"
+            android:textSize="16sp"
+            android:paddingBottom="16dp"/>
+
+        <!-- Symptoms and Prevention Title -->
+        <TextView
+            android:id="@+id/title_symptoms_prevention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Symptoms and Prevention:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- Symptoms and Prevention Content -->
+        <TextView
+            android:id="@+id/symptoms_prevention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Tomato Early Blight:\n  - Symptoms: Dark spots with concentric rings on lower leaves.\n  - Prevention: Use resistant varieties, rotate crops, remove affected leaves.\n\n• Tomato Late Blight:\n  - Symptoms: Large, dark, greasy-looking spots on leaves and fruit.\n  - Prevention: Use resistant varieties, avoid overhead watering, remove affected plants.\n\n• Tomato Septoria Leaf Spot:\n  - Symptoms: Small, circular spots with gray centers and dark borders on lower leaves.\n  - Prevention: Use disease-free seeds, avoid overhead watering, remove affected leaves."
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>

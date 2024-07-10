@@ -1,6 +1,7 @@
 package com.example.registerpage;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView textView;
     FirebaseUser user;
-    CardView logoutCard;
+    CardView logoutCard, homeCard;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
         logoutCard = findViewById(R.id.logout_card);
+        homeCard = findViewById(R.id.home_card);
 
         if (user == null) {
             Intent intent = new Intent(getApplicationContext(), LogIn.class);
@@ -53,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), LogIn.class);
             startActivity(intent);
             finish();
+        });
+
+        homeCard.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), Home.class);
+            startActivity(intent);
         });
     }
 }
