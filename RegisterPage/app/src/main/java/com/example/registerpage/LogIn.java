@@ -30,13 +30,12 @@ public class LogIn extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
-
         }
     }
 
@@ -89,7 +88,7 @@ public class LogIn extends AppCompatActivity {
                                     finish(); //will close the log in and open main activity
                                 } else {
 
-                                    Toast.makeText(LogIn.this, "Authentication failed.",
+                                     Toast.makeText(LogIn.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
 
                                 }

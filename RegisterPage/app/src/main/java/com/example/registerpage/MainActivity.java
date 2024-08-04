@@ -1,12 +1,10 @@
 package com.example.registerpage;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,10 +14,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button button;
+    Button logoutButton, getStartedButton, viewRecommendationsButton;
     TextView textView;
     FirebaseUser user;
-    CardView logoutCard, homeCard;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         auth = FirebaseAuth.getInstance();
-        button = findViewById(R.id.logout_button);
+        logoutButton = findViewById(R.id.logout_button);
+        getStartedButton = findViewById(R.id.btn_take_picture);
+        viewRecommendationsButton = findViewById(R.id.view_recommendations_button);
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
-        logoutCard = findViewById(R.id.logout_card);
-        homeCard = findViewById(R.id.home_card);
 
         if (user == null) {
             Intent intent = new Intent(getApplicationContext(), LogIn.class);
@@ -42,22 +39,20 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(user.getEmail());
         }
 
-        button.setOnClickListener(view -> {
+        logoutButton.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(getApplicationContext(), LogIn.class);
             startActivity(intent);
             finish();
         });
 
-        logoutCard.setOnClickListener(view -> {
-            FirebaseAuth.getInstance().signOut();
-            Intent intent = new Intent(getApplicationContext(), LogIn.class);
+        getStartedButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, TomatoScanActivity.class);
             startActivity(intent);
-            finish();
         });
 
-        homeCard.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), Home.class);
+        viewRecommendationsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, InformationActivity.class);
             startActivity(intent);
         });
     }
