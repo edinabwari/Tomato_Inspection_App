@@ -35,9 +35,4 @@ Image upload or capture page looks like this when the user press the get started
 They can view the results given by the model
 ![results page ](https://github.com/edinabwari/Tomato_Inspection_App/blob/main/App_images/IMG-20240731-WA0024.jpg)
 
-Images that are not tomato are recognised and given an alert feedback
-![Admin dashboard ](https://github.com/edinabwari/Internship_Placement_System/blob/main/Resources/Screenshot%202024-07-01%20213948.png)
 
-Users can also learn more on other tomato diseases in the application 
-![Admin dashboard ](https://github.com/edinabwari/Internship_Placement_System/blob/main/Resources/Screenshot%202024-07-01%20214000.png)
----
